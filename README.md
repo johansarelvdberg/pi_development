@@ -43,7 +43,7 @@ Install basic tools as in chapter 1:
 ```bash
 sudo apt update
 sudo apt install automake git autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev libusb-1.0-0-dev
-sudo apt install minicom  gdb-multiarch
+sudo apt install minicom  gdb-multiarch sshfs openssh-server rsync ca-certificates
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
 sudo apt install build-essential libstdc++-arm-none-eabi-newlib libusb-1.0-0-dev
 sudo apt install code
@@ -83,3 +83,15 @@ Use picotool to load binary to Pico, see `https://github.com/raspberrypi/picotoo
 
 Unplug Pico, hold boot select down and plugin in Pico to enable storage mode. Run ` sudo picotool info -a`
 to get info about Pico.
+
+## Step 4
+
+cross compile see 
+
+-   https://hub.docker.com/r/sdthirlwall/raspberry-pi-cross-compiler/  
+-   https://desertbot.io/blog/how-to-cross-compile-for-raspberry-pi 
+-   https://hub.docker.com/r/mitchallen/pi-cross-compile/
+
+Mounting:
+
+-   https://phoenixnap.com/kb/sshfs
