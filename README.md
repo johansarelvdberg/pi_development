@@ -41,7 +41,14 @@ Install basic tools as in chapter 1:
 ```bash
 sudo apt update
 sudo apt install automake git autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev libusb-1.0-0-dev
- 
+sudo apt install minicom  gdb-multiarch
+sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
+sudo apt install build-essential libstdc++-arm-none-eabi-newlib libusb-1.0-0-dev
+sudo apt install code
+code --install-extension marus25.cortex-debug
+code --install-extension ms-vscode.cmake-tools
+code --install-extension ms-vscode.cpptools
+
 wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh
 chmod +x pico_setup.sh
 ./pico_setup.sh
@@ -59,8 +66,7 @@ git clone https://github.com/raspberrypi/pico-examples.git --branch master
 ```
 Install the chain tools"
 ```bash
-sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
-sudo apt install build-essential libstdc++-arm-none-eabi-newlib libusb-1.0-0-dev
+
 cd pico-sdk
 git pull
 git submodule update
