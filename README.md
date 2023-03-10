@@ -44,6 +44,16 @@ cd zram-swap && sudo ./install.sh
 ```
 
 
+Install webadmin
+```bash
+deb https://download.webmin.com/download/repository sarge contrib
+cd /tmp
+wget http://www.webmin.com/jcameron-key.asc
+sudo apt-key add jcameron-key.asc
+sudo apt update
+sudo apt install webmin -y
+```
+
 # Pi setup for development
 
 Based on "Getting started with Pashberry Pi Pico"
