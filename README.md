@@ -42,11 +42,11 @@ Based on "Getting started with Pashberry Pi Pico"
 Install basic tools as in chapter 1:
 ```bash
 sudo apt update
-sudo apt install automake git autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev libusb-1.0-0-dev
-sudo apt install minicom  gdb-multiarch sshfs openssh-server rsync ca-certificates
-sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
-sudo apt install build-essential libstdc++-arm-none-eabi-newlib libusb-1.0-0-dev
-sudo apt install code
+sudo apt install automake git autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev libusb-1.0-0-dev -y
+sudo apt install minicom  gdb-multiarch sshfs openssh-server rsync ca-certificates -y
+sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi -y
+sudo apt install build-essential libstdc++-arm-none-eabi-newlib libusb-1.0-0-dev -y
+sudo apt install code -y
 code --install-extension marus25.cortex-debug
 code --install-extension ms-vscode.cmake-tools
 code --install-extension ms-vscode.cpptools
