@@ -33,6 +33,16 @@ sudo chmod +x remove-bloat.sh
 sudo ./remove-bloat.sh
 ```
 
+# add ons
+
+Install zram for better performance
+
+```bash
+cd /tmp
+git clone https://github.com/foundObjects/zram-swap.git
+cd zram-swap && sudo ./install.sh
+```
+
 
 # Pi setup for development
 
