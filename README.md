@@ -46,13 +46,14 @@ cd zram-swap && sudo ./install.sh
 
 Install webadmin
 ```bash
-deb https://download.webmin.com/download/repository sarge contrib
+echo "deb https://download.webmin.com/download/repository sarge contrib" | sudo tee /etc/apt/sources.list.d/webadmin.list > /dev/null
 cd /tmp
 wget http://www.webmin.com/jcameron-key.asc
 sudo apt-key add jcameron-key.asc
 sudo apt update
 sudo apt install webmin -y
 ```
+to access the service open `https://IP_ADDRESS:10000`.
 
 # Pi setup for development
 
@@ -80,6 +81,15 @@ sudo reboot
 ## Step 2
 Get the sdk and exmaples:
 ```bash
+git clone https://github.com/libusb/hidapi/
+cd hidapi
+./bootstrap
+./configure
+# then sudo apt install the libs that configure tells you to install
+./configure
+make
+sudo make install
+cd ..
 git clone https://github.com/raspberrypi/pico-sdk.git --branch master
 cd pico-sdk
 git submodule update --init
@@ -115,3 +125,8 @@ cross compile see
 Mounting:
 
 -   https://phoenixnap.com/kb/sshfs
+
+## VSCode
+
+Install the extension: `Cortex-Debug`
+
