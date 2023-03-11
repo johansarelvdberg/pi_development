@@ -104,6 +104,12 @@ git pull
 git submodule update
 ```
 
+Assuming your /etc/udev/rules.d/60-openocd.rules contains this (if not you can add it)
+
+# Raspberry Pi Picoprobe
+ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0004", MODE="660", GROUP="plugdev", TAG+="uaccess"
+
+Then you can add your user to the plugdev group
 
 ## Step 3
 
